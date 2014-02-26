@@ -1,4 +1,54 @@
-这是在master下改的
-master又改
+http://rogerdudler.github.io/git-guide/index.zh.html
 
-test也改一次
+常用命令
+git init //在当前目录下初始化仓库
+git add readme.txt //添加到index
+git commit -m "这是注释" //提交
+git status //查看状态
+git branch //查看分支
+git branch test //新建分支
+git branch -d test //删除分支test，git branch -D test为强制删除
+git checkout test //切换到分支test
+get merge test //将test分支合并到当前分支
+
+一、软件
+Windows：msysGit(http://msysgit.github.io/)、TortoiseGit
+
+二、设置
+git config --global user.name "Your Name"
+git config --global user.email "Your Email"
+
+三、本地解决冲突
+merge后若有冲突，修改冲突文件后，git add后即算为解决
+
+四、GitHub远程仓库
+
+1.使用Git Gui或者命令行，输入密码后生成本地的SSH密钥，并将密钥添加到GitHub账户的profile里面去。
+
+命令行：ssh-keygen -t rsa -C "email@email.com"
+邮箱务必改为GitHub账户邮箱，文件保存路径使用默认即可。
+
+2.ssh -T git@github.com
+尝试连接GitHub
+
+
+//克隆远程仓库
+git clone username@host:/path/to/repository
+
+//将本地仓库的内容推送到远程仓库下的master分支，origin是默认的远程仓库别名
+git push origin master
+
+//如果还没有克隆现有仓库，并欲将本地仓库连接到某个远程服务器，可以使用如下命令添加
+git remote add origin <server>
+
+//从远程获取master分支的最新版本到本地的origin/master分支
+git fetch origin master
+git merge origin/master //将origin/master分支合并到当前分支
+
+//从远程获取最新版本并merge到本地当前分支
+git pull origin master
+
+五、小技巧
+
+//还原文件，替换本地改动
+git checkout --readme.txt
