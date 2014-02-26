@@ -48,6 +48,12 @@ git merge origin/master //将origin/master分支合并到当前分支
 //从远程获取最新版本并merge到本地当前分支
 git pull origin master
 
+//重命名远程仓库
+git remote rename origin ongithub
+
+//删除远程仓库
+git remote rm origin
+
 五、小技巧
 
 //还原文件，替换本地改动
