@@ -71,13 +71,13 @@ git tag -a 0.1 -m "Release version 0.1"
 //下面是常见步骤
 git add .
 git commit -m "fixed some bugs"
-git tag -a 0.1 -m "fixed some bugs"
+git tag -a 0.1 -m "Release version 0.1"
 //提交到服务器
 git push origin master
-git push origin -tags
+git push origin --tags
 
 //删除标签
 git tag -d 0.1
 
 //删除服务器上的标签
-git push origin:refs/tags/0.1
+git push origin :refs/tags/0.1
